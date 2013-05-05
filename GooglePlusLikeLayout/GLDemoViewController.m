@@ -9,9 +9,11 @@
 #import "GLDemoViewController.h"
 #import "SVPullToRefresh.h"
 #import "GLGooglePlusLikeLayout.h"
+#import "GLSectionView.h"
 #import "GLCell.h"
 
 #define DATA_TO_ADD 30
+#define SECTION_IDENTIFIER @"section"
 #define CELL_IDENTIFIER @"cell"
 
 @interface GLDemoViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
@@ -36,7 +38,6 @@
         [_collectionView setDataSource:self];
         _collectionView.backgroundColor = [UIColor colorWithWhite:0.85f alpha:1.0f];
         [_collectionView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin];
-        [_collectionView registerClass:[GLCell class] forCellWithReuseIdentifier:CELL_IDENTIFIER];
     }
     return _collectionView;
 }
@@ -73,6 +74,15 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    // configure views
+    GLGooglePlusLikeLayout *layout = (GLGooglePlusLikeLayout *)[self.collectionView collectionViewLayout];
+    [layout setHasHeaders:YES];
+    
+    [self.collectionView registerClass:[GLSectionView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:SECTION_IDENTIFIER];
+    [self.collectionView registerClass:[GLCell class] forCellWithReuseIdentifier:CELL_IDENTIFIER];
+    
+    
+    // load data
     [self configurePullToRefresh];
     [self.collectionView triggerPullToRefresh];
 }
@@ -113,7 +123,29 @@
 }
 
 
-#pragma mark - UICollectionViewDataSource
+#pragma mark - UICollectionView Stuff
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionReusableView *suppView;
+    
+    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
+        if (indexPath.section == 0) {
+            GLSectionView *sectionView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:SECTION_IDENTIFIER forIndexPath:indexPath];
+            [sectionView setBackgroundColor:[UIColor darkGrayColor]];
+            [sectionView setDisplayString:@"Section 1"];
+            suppView = sectionView;
+        }
+    }
+    
+    return suppView;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewFlowLayout*)collectionViewLayout heightForSupplementaryViewOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath;
+{
+    return 30;
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return self.dataSource.count;

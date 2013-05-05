@@ -23,6 +23,7 @@
 		C744DEC91736C1D100A76EAC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C744DEC81736C1D100A76EAC /* QuartzCore.framework */; };
 		C744DECF1736C3D500A76EAC /* GLFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C744DECC1736C3D400A76EAC /* GLFlowLayout.m */; };
 		C744DED01736C3D500A76EAC /* GLGooglePlusLikeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C744DECE1736C3D500A76EAC /* GLGooglePlusLikeLayout.m */; };
+		C744DED31736CA3300A76EAC /* GLSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C744DED21736CA3300A76EAC /* GLSectionView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,8 @@
 		C744DECC1736C3D400A76EAC /* GLFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLFlowLayout.m; sourceTree = "<group>"; };
 		C744DECD1736C3D500A76EAC /* GLGooglePlusLikeLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLGooglePlusLikeLayout.h; sourceTree = "<group>"; };
 		C744DECE1736C3D500A76EAC /* GLGooglePlusLikeLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLGooglePlusLikeLayout.m; sourceTree = "<group>"; };
+		C744DED11736CA3300A76EAC /* GLSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLSectionView.h; sourceTree = "<group>"; };
+		C744DED21736CA3300A76EAC /* GLSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLSectionView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,8 @@
 				C744DEA71736A1C500A76EAC /* GLAppDelegate.m */,
 				C744DEBA1736BCF700A76EAC /* GLDemoViewController.h */,
 				C744DEBB1736BCF700A76EAC /* GLDemoViewController.m */,
+				C744DED11736CA3300A76EAC /* GLSectionView.h */,
+				C744DED21736CA3300A76EAC /* GLSectionView.m */,
 				C744DEBD1736BDDF00A76EAC /* GLCell.h */,
 				C744DEBE1736BDDF00A76EAC /* GLCell.m */,
 				C744DE9E1736A1C500A76EAC /* Supporting Files */,
@@ -225,6 +230,7 @@
 				C744DEC71736C15500A76EAC /* UIScrollView+SVPullToRefresh.m in Sources */,
 				C744DECF1736C3D500A76EAC /* GLFlowLayout.m in Sources */,
 				C744DED01736C3D500A76EAC /* GLGooglePlusLikeLayout.m in Sources */,
+				C744DED31736CA3300A76EAC /* GLSectionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +347,7 @@
 				C744DEB31736A1C500A76EAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
