@@ -1,8 +1,8 @@
 GLGooglePlusLikeLayout
 ======================
-This layout is inspired by GooglePlus and [Pinterest](http://pinterest.com/).
+This layout is inspired by GooglePlus.
 
-GLGooglePlusLikeLayout is custom layout based on UICollectionView which can be used to show the data based on their content-size by maintaining the row(linear) unlike pinterest style.
+GLGooglePlusLikeLayout is custom layout based on UICollectionView which can be used to show the data based on their content-size and by maintaining the row linear, unlike waterflow style layout.
 
 Note
 ----------
