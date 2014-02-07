@@ -31,7 +31,6 @@ static NSString * const ContentCellKind = @"content_cell";
 @property (nonatomic) UIEdgeInsets edgeInsets;
 @property (nonatomic) CGFloat interitemSpacing;
 @property (nonatomic) CGFloat interSectionSpacing;
-@property (nonatomic) NSUInteger numberOfColumns;
 @property (nonatomic) CGSize minimumItemSize;
 @property (nonatomic) LayoutStyle layoutStyle;
 

@@ -19,6 +19,8 @@ static NSString * const ChangeRowKey = @"change_row";
 @interface GLGooglePlusLikeLayout() {
 }
 
+@property (nonatomic) NSUInteger numberOfColumns; // currently only 2 columns are supported (fixed 2 cols)
+
 @property(nonatomic, strong) NSMutableArray *columnHeights; // height for each column
 @property(nonatomic, strong) NSDictionary *layoutInfo;
 @property(nonatomic, strong) NSMutableDictionary *cellAttributes;

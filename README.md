@@ -16,6 +16,7 @@ Refer GLDemoViewController for the demo.
 Limitation
 ----------
 - No supplementary footer view and decoration view.
+- Variable column(s) support (Currently only 2 default columns are supported).
 
 Screen Shots
 ------------
